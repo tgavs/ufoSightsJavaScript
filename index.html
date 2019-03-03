@@ -32,6 +32,7 @@
             <div class="panel panel-default">
               <div class="panel-heading">Filter Search</div>
               <div class="panel-body">
+
                 <form>
                   <div class="form-group">
                     <ul class="list-group" id="filters">
@@ -39,10 +40,38 @@
                         <label for="date">Enter a Date</label>
                         <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
                       </li>
+
+                      <li class="filter list-group-item">
+                        <label for="city">Enter a City</label>
+                        <input class="form-control" id="city" type="text" placeholder="san jacinto">
+                      </li>
+
+                      
+                      <li class="filter list-group-item">
+                        
+
+                        <label for="state">Select State</label>
+                     
+
+                        <ul style="list-style: none;">
+
+                          <li><input type="checkbox"  value="ca"> ca</li>
+                          <li><input type="checkbox"  value="ny"> ny</li>
+                          
+                        </ul>
+
+                    
+                        
+                      </li>
+                      
+
+
                     </ul>
                   </div>
                   <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
                 </form>
+                
+
               </div>
             </div>
           </aside>
