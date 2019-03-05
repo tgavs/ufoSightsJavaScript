@@ -50,9 +50,49 @@ filter.on("click",function(){
             });   
         };
         
-    });  
+    });
 
-})
+//------------------------------------------- Get value from checkboxes-----------------------------
+
+    var checkes=[];
+    var boxes = d3.selectAll("#menuElement");
+
+    console.log(boxes)
+
+    boxes.each(function(){
+
+        //console.log(this.value)
+        //console.log(this.checked);
+
+        if(this.checked==true){
+
+            checkes.push(this.value);
+
+        }
+        
+
+    });
+
+    //console.log(checkes)
+
+//------------------------------------------- Get value from checkboxes-----------------------------
+      
+
+
+});
+
+
+
+
+/* var checked = [];
+d3.select("button").on("click", function () {
+    var boxes = d3.selectAll("input.checkbox:checked");
+    boxes.each(function () {
+        checked.push(this.value)
+    });
+    console.log(checked)
+}); */
+
 
 
 
