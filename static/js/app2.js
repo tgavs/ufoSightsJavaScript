@@ -7,7 +7,7 @@ var filter = d3.select("#filter-btn");
 
 //---------------------------< Get list of unique states>-------------------------------
 
-var allStates=[]
+/* var allStates=[]
 
 tableData.forEach(d=> allStates.push(d.state));
 
@@ -21,15 +21,21 @@ var stateList = d3.select("#statesList")
 
 uniqueStates.forEach(state=>{
 
-    var row = stateList.append("li").attr("id", "CheckMenu");
+    var row = stateList.append("li")
+                       .attr("id", "CheckMenu")
+                       .append("input")
+                       .attr("id", "menuElement")
+                       .attr("type", "checkbox")
+                       .property("value", state)
+                       .append("text");
+                       
+    var texto=row.text(state);
 
-    row.append("input")
-       .attr("id","menuElement")
-       .attr("type", "checkbox")
-       .property("value",state)
-        .text('"' + state + '"').style("fill", "black") 
-
+    texto.style("color","black");
+    console.log(row);
 });
+ */
+
 
 
 
@@ -39,7 +45,7 @@ uniqueStates.forEach(state=>{
 //---------------------------</Get list of unique states>-------------------------------
 
 
-
+//---------------------------<Filter Table Event>----------------------------------------
 
 filter.on("click",function(){
 
@@ -142,7 +148,7 @@ filter.on("click",function(){
     
     //---------------------------</Filter Data> -------------------------------------------
 
-   // ---------------------------Build new table records---------------------------------------
+   // ---------------------------<Build new table records>---------------------------------------
 
     var tbody = d3.select("tbody");
 
@@ -159,7 +165,7 @@ filter.on("click",function(){
     }); 
 
 
- // ---------------------------Build new table records---------------------------------------
+ // ---------------------------</Build new table records>---------------------------------------
 
 });
 
